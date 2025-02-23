@@ -1,7 +1,7 @@
 import { CartContext, ProductsContext } from "../Context/contexts";
 import { ICart, IProduct } from "../interfaces";
 
-import Card from "./Card";
+import Card from "./Card/Card";
 import { Link } from "react-router";
 import { colors } from "../theme.style";
 import { useContext } from "react";
@@ -81,13 +81,7 @@ function Cart() {
             <h3>Recommended products</h3>
             <div style={{ display: "flex", gap: "20px" }}>
               {products.splice(0, 5).map((item: IProduct) => (
-                <Card
-                  id={item.id}
-                  image={item.image}
-                  title={item.title}
-                  price={item.price}
-                  key={item.id}
-                />
+                <Card product={item} key={item.id} />
               ))}
             </div>
           </div>
