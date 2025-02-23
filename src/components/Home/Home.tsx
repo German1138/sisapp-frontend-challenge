@@ -1,6 +1,6 @@
 import { Container, SubContainer } from "./Home.styles";
 
-import Card from "../Card";
+import Card from "../Card/Card";
 import { IProduct } from "../../interfaces";
 import ProductsContext from "../../Context/ContextDeclarations";
 import { useContext } from "react";
