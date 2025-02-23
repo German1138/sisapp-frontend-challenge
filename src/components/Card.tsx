@@ -1,4 +1,10 @@
-import { CardImage, Container, Price, SubContainer, Title } from "./Card.style";
+import {
+  CardImage,
+  Container,
+  Price,
+  SubContainer,
+  Title,
+} from "./Card.styles";
 
 import { ICard } from "../interfaces";
 import { Link } from "react-router";
