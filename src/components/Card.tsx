@@ -6,10 +6,12 @@ import {
   Title,
 } from "./Card.styles";
 
-import { ICard } from "../interfaces";
+import { IProduct } from "../interfaces";
 import { Link } from "react-router";
 
-function Card({ id, image, title, price }: ICard) {
+function Card({ product }: { product: IProduct }) {
+  const { id, image, title, price } = product;
+
   return (
     <Link to={`/${id}`}>
       <Container>
