@@ -11,8 +11,8 @@ import {
   SubContainer,
 } from "./ProductDetail.styles";
 
-import { CartContext } from "../Context/contexts";
-import ProductsContext from "../Context/ContextDeclarations";
+import { CartContext } from "../../Context/contexts";
+import ProductsContext from "../../Context/ContextDeclarations";
 import { useContext } from "react";
 import { useParams } from "react-router";
 
