@@ -1,9 +1,9 @@
-import { CartContext, ProductsContext } from "../Context/contexts";
-import { ICart, IProduct } from "../interfaces";
+import { CartContext, ProductsContext } from "../../Context/contexts";
+import { ICart, IProduct } from "../../interfaces";
 
-import Card from "./Card/Card";
+import Card from "../Card/Card";
 import { Link } from "react-router";
-import { colors } from "../theme.style";
+import { colors } from "../../theme.style";
 import { useContext } from "react";
 
 function Cart() {
@@ -96,7 +96,7 @@ function Cart() {
         display: "flex",
         justifyContent: "center",
         padding: "100px 0px",
-        gap: "50px",
+        gap: "30px",
         width: "100%",
       }}
     >
