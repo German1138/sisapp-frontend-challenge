@@ -4,7 +4,13 @@ import { colors } from "../theme.style";
 import { useContext } from "react";
 
 function NavBar() {
-  const { cart } = useContext(CartContext);
+  const context = useContext(CartContext);
+
+  if (!context) {
+    throw new Error("There's no context");
+  }
+
+  const { cart } = context;
 
   return (
     <div
