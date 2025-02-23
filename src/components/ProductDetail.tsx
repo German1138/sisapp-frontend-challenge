@@ -1,5 +1,5 @@
 import { CartContext } from "../Context/contexts";
-import ProductsContext from "../Context/ProductsContext";
+import ProductsContext from "../Context/ContextDeclarations";
 import { colors } from "../theme.style";
 import { useContext } from "react";
 import { useParams } from "react-router";
