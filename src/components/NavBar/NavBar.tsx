@@ -1,6 +1,6 @@
 import { Badge, NavContainer } from "./NavBar.styles";
 
-import { CartContext } from "../Context/contexts";
+import { CartContext } from "../../Context/contexts";
 import { Link } from "react-router";
 import { useContext } from "react";
 

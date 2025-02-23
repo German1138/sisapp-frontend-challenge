@@ -1,4 +1,4 @@
-import { colors } from "../theme.style";
+import { colors } from "../../theme.style";
 import styled from "styled-components";
 
 export const NavContainer = styled.nav`
