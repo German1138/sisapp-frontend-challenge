@@ -7,7 +7,7 @@ import {
 } from "./Context/ContextDeclarations";
 
 import App from "./App";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import { StrictMode } from "react";
