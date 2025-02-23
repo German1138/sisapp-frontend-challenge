@@ -6,7 +6,7 @@ import {
   Title,
 } from "./Card.styles";
 
-import { IProduct } from "../interfaces";
+import { IProduct } from "../../interfaces";
 import { Link } from "react-router";
 
 function Card({ product }: { product: IProduct }) {
