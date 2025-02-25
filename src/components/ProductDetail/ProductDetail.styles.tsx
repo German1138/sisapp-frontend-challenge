@@ -12,7 +12,7 @@ export const Container = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
+  margin: 100px 20px;
 `;
 
 export const SubContainer = styled.article`
@@ -22,11 +22,19 @@ export const SubContainer = styled.article`
   background-color: ${colors.white};
   padding: 20px;
   gap: 30px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 export const DetailImage = styled.img`
   object-fit: contain;
   max-width: 250px;
+
+  @media (max-width: 425px) {
+    align-self: center;
+  }
 `;
 
 export const InfoContainer = styled.section`
@@ -54,6 +62,7 @@ export const MetadataSpan = styled.span`
   padding: 10px;
   font-size: 12px;
   border-radius: 10px;
+  width: fit-content;
   color: ${colors.white};
 `;
 
@@ -65,6 +74,8 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
+  all: unset;
+  text-align: center;
   background-color: ${colors.red};
   color: ${colors.white};
   padding: 15px;
@@ -75,4 +86,21 @@ export const Button = styled.button`
   font-weight: 600;
   width: 100%;
   align-self: self-end;
+
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+
+  &:hover {
+    background-color: ${colors.alt_red};
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: 2px solid ${colors.black};
+  }
+
+  @media (max-width: 425px) {
+    align-self: center;
+    max-width: none;
+    box-sizing: border-box;
+  }
 `;
