@@ -16,10 +16,9 @@ export const NavContainer = styled.nav`
 export const Logo = styled.h1`
   font-size: 24px;
   transition: background-color 0.3s ease-in-out, transform 0.2s ease;
-
+  color: ${colors.white};
   &:hover {
-    color: ${colors.white};
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 `;
 
@@ -28,23 +27,21 @@ export const CartLogo = styled.div`
   transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 `;
 
 export const Badge = styled.span`
   position: absolute;
   font-weight: 700;
-  background-color: ${colors.white};
-  padding: 3px;
+  background-color: ${colors.red};
+  color: ${colors.white};
   border-radius: 100%;
-  font-size: 8px;
-  bottom: 0;
-  right: -3px;
-
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.25);
-  }
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.4;
+  top: -3px;
+  right: -6px;
 `;
