@@ -9,6 +9,7 @@ import {
   NoProductContainer,
   Price,
   SubContainer,
+  Title,
 } from "./ProductDetail.styles";
 
 import { CartContext } from "../../Context/contexts";
@@ -42,7 +43,7 @@ function ProductDetail() {
         <DetailImage src={product.image} />
 
         <InfoContainer>
-          <h1 style={{ fontSize: "26px" }}>{product.title}</h1>
+          <Title>{product.title}</Title>
           <Price>$ {product.price}</Price>
 
           <MetadataContainer>
