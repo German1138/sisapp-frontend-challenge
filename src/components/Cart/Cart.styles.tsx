@@ -36,6 +36,8 @@ export const Container = styled.section`
 export const SubContainer = styled.div`
   display: flex;
   gap: 20px;
+  width: 100%;
+  justify-content: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -47,6 +49,7 @@ export const ProductsContainer = styled.div`
   flex-direction: column;
   max-width: 1024px;
   gap: 20px;
+  width: 100%;
 `;
 
 export const Checkout = styled.div`
@@ -54,11 +57,12 @@ export const Checkout = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 200px;
-  height: 120px;
   background-color: ${colors.white};
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 15px;
   gap: 15px;
+  box-sizing: border-box;
+  max-height: 150px;
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -70,11 +74,11 @@ export const Checkout = styled.div`
 export const CheckoutDataContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 
   @media (max-width: 768px) {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     width: 50%;
   }
@@ -83,20 +87,20 @@ export const CheckoutDataContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
   }
 `;
 
 export const CheckoutData = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 5px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media (max-width: 425px) {
-    width: 100%;
     justify-content: space-between;
   }
 `;
@@ -109,8 +113,8 @@ export const Button = styled.button`
   max-width: 250px;
   padding: 5px 15px;
   cursor: pointer;
-  border-radius: 8px;
-  font-size: 20px;
+  border-radius: 5px;
+  font-size: 18px;
   font-weight: 600;
 
   @media (max-width: 320px) {
@@ -121,7 +125,7 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${colors.alt_red};
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   &:focus {
