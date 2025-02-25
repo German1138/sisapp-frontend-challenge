@@ -20,7 +20,7 @@ function NavBar() {
     <header>
       <NavContainer>
         <Link to="/" aria-label="Go to home">
-          <Logo>SISAPP STORE</Logo>
+          <Logo id="logo">SISAPP STORE</Logo>
         </Link>
 
         <Link to="/cart" aria-label="Go to cart">
