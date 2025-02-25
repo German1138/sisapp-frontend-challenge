@@ -3,7 +3,8 @@ import { useContext, useMemo } from "react";
 
 import { CartContext } from "../../Context/contexts";
 import { Link } from "react-router";
-import cartIcon from "../../assets/shopping-cart.svg";
+import ShoppingCart from "../../assets/ShoppingCart";
+import { colors } from "../../theme.style";
 
 function NavBar() {
   const context = useContext(CartContext);
@@ -24,7 +25,7 @@ function NavBar() {
 
         <Link to="/cart" aria-label="Go to cart">
           <CartLogo>
-            <img src={cartIcon} alt="shopping cart" width={35} />
+            <ShoppingCart color={colors.white} size={35} />
             {cartItemCount > 0 && <Badge>{cartItemCount}</Badge>}
           </CartLogo>
         </Link>
