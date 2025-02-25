@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# SisApp Frontend Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pasos para correr la aplicación
 
-Currently, two official plugins are available:
+1. **Instalar dependencias**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   ```sh
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. **Ejecutar la aplicación en modo desarrollo**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```sh
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. **Construir la aplicación para producción**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```sh
+   npm run build
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. **Previsualizar la aplicación en producción**
+   ```sh
+   npm run preview
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Explicación breve de la solución
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Esta aplicación es una solución frontend basada en **React 19**, utilizando **Vite** como herramienta de construcción para optimizar el rendimiento. Se ha integrado **Styled Components** para la gestión de estilos y **React Router** para la navegación entre vistas.
+
+El objetivo principal de la app es proporcionar una experiencia de usuario rápida y fluida, con un código modular y mantenible. La arquitectura sigue buenas prácticas con separación de responsabilidades y componentes reutilizables.
+
+## Mejoras futuras sugeridas
+
+- **Optimización del rendimiento**: Uso de técnicas como lazy loading y memoización para mejorar la carga inicial y la renderización.
+- **Tests unitarios y de integración**: Agregar herramientas como Jest y React Testing Library para asegurar la calidad del código.
+- **Internacionalización (i18n)**: Soporte para múltiples idiomas mediante react-intl o similares.
+- **Modo oscuro**: Implementar una opción para cambiar entre temas claro y oscuro.
+- **Mejor manejo de estado**: Evaluar la necesidad de una solución como Redux, Zustand o React Context para manejar el estado global de manera más eficiente.
