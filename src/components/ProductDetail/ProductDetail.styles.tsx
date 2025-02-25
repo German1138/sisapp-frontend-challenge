@@ -18,12 +18,12 @@ export const Container = styled.main`
 export const SubContainer = styled.article`
   display: flex;
   max-width: 768px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: ${colors.white};
   padding: 20px;
   gap: 30px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -32,7 +32,7 @@ export const DetailImage = styled.img`
   object-fit: contain;
   max-width: 250px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     align-self: center;
   }
 `;
@@ -44,7 +44,15 @@ export const InfoContainer = styled.section`
   gap: 30px;
 `;
 
-export const Price = styled.h1`
+export const Title = styled.h1`
+  font-size: 26px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+export const Price = styled.p`
   font-size: 36px;
   font-weight: 600;
   margin: 0;
@@ -52,16 +60,18 @@ export const Price = styled.h1`
 
 export const MetadataContainer = styled.dl`
   display: flex;
-  gap: 15px;
+  gap: 5px;
   margin: 0;
+  flex-wrap: wrap;
 `;
 
 export const MetadataSpan = styled.span`
   font-weight: 600;
   background-color: ${colors.blue};
-  padding: 10px;
+  padding: 5px 10px;
   font-size: 12px;
-  border-radius: 10px;
+  border-radius: 50px;
+  height: 15px;
   width: fit-content;
   color: ${colors.white};
 `;
@@ -80,25 +90,25 @@ export const Button = styled.button`
   color: ${colors.white};
   padding: 15px;
   cursor: pointer;
-  border-radius: 8px;
-  font-size: 24px;
+  border-radius: 5px;
+  font-size: 20px;
   max-width: 250px;
   font-weight: 600;
   width: 100%;
   align-self: self-end;
 
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  transition: background-color 150ms ease-in-out, transform 150ms ease;
 
   &:hover {
     background-color: ${colors.alt_red};
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 
   &:focus {
     outline: 2px solid ${colors.black};
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     align-self: center;
     max-width: none;
     box-sizing: border-box;
