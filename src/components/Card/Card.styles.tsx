@@ -2,7 +2,7 @@ import { colors } from "../../theme.style";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: ${colors.white};
   padding: 15px;
   max-width: 250px;
@@ -24,10 +24,10 @@ export const Container = styled.div`
     box-sizing: border-box;
   }
 
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  transition: background-color 150ms ease-in-out, transform 150ms ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.015);
   }
 `;
 
