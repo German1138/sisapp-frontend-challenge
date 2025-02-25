@@ -2,26 +2,30 @@ import { CartContext, ProductsContext } from "./contexts";
 import { IContextProvider, IProduct } from "../interfaces";
 import { useEffect, useState } from "react";
 
-const loadInitialData = async () => {
-  const url = "https://fakestoreapi.com/products";
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-
-    return json;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const products = await loadInitialData();
-
 export function ProductsContextProvider({ children }: IContextProvider) {
+  const [products, setProducts] = useState<IProduct[]>([]);
+
+  useEffect(() => {
+    const loadInitialData = async () => {
+      const url = "https://fakestoreapi.com/products";
+      try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+
+        setProducts(json);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadInitialData();
+  }, []);
+
   return (
     <ProductsContext.Provider value={products}>
       {children}
