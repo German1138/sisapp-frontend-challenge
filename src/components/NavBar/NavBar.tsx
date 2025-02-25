@@ -1,8 +1,9 @@
-import { Badge, NavContainer } from "./NavBar.styles";
+import { Badge, CartLogo, Logo, NavContainer } from "./NavBar.styles";
+import { useContext, useMemo } from "react";
 
 import { CartContext } from "../../Context/contexts";
 import { Link } from "react-router";
-import { useContext } from "react";
+import cartIcon from "../../assets/shopping-cart.svg";
 
 function NavBar() {
   const context = useContext(CartContext);
@@ -10,26 +11,22 @@ function NavBar() {
   if (!context) {
     throw new Error("There's no context");
   }
-
   const { cart } = context;
+
+  const cartItemCount = useMemo(() => cart.length, [cart]);
 
   return (
     <header>
       <NavContainer>
-        <Link to="/">
-          <h1 style={{ fontSize: "24px" }}>SISAPP STORE</h1>
+        <Link to="/" aria-label="Go to home">
+          <Logo>SISAPP STORE</Logo>
         </Link>
 
-        <form role="search">
-          <input type="text" placeholder="Search..." aria-label="Search" />
-          <button type="submit">🔍</button>
-        </form>
-
-        <Link to="/cart">
-          <div style={{ position: "relative" }}>
-            <img src="src\assets\shopping-cart.svg" alt="shopping cart" />
-            {cart.length > 0 && <Badge>{cart.length}</Badge>}
-          </div>
+        <Link to="/cart" aria-label="Go to cart">
+          <CartLogo>
+            <img src={cartIcon} alt="shopping cart" width={35} />
+            {cartItemCount > 0 && <Badge>{cartItemCount}</Badge>}
+          </CartLogo>
         </Link>
       </NavContainer>
     </header>
