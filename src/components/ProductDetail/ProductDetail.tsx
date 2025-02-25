@@ -60,6 +60,7 @@ function ProductDetail() {
             onClick={() => {
               setCart([...cart, product]);
             }}
+            aria-label="Add product to cart"
           >
             Add to cart
           </Button>
