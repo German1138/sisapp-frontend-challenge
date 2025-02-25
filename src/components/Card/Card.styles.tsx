@@ -10,6 +10,25 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    max-width: 200px;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 140px;
+  }
+
+  @media (max-width: 320px) {
+    width: 280px;
+    box-sizing: border-box;
+  }
+
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const CardImage = styled.img`
