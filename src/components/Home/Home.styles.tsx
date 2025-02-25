@@ -8,14 +8,12 @@ export const Container = styled.main`
 export const SubContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 20px;
   max-width: 1024px;
   padding: 100px 10px;
 
   @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
 `;
