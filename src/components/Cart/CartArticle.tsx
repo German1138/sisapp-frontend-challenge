@@ -3,6 +3,7 @@ import {
   Container,
   DeleteAllButton,
   Image,
+  ImageAndTitleContainer,
   Price,
   StockButton,
   StockContainer,
@@ -47,14 +48,13 @@ function CartArticle({ product, quantity }: ICart) {
 
   return (
     <Container>
-      <Image src={product.image} alt={product.title} />
+      <ImageAndTitleContainer>
+        <Image src={product.image} alt={product.title} />
 
-      <Link to={`/${product.id}`}>
-        <Title>
-          {product.title.substring(0, 50).trim()}
-          {product.title.length > 50 && "..."}
-        </Title>
-      </Link>
+        <Link to={`/${product.id}`}>
+          <Title>{product.title}</Title>
+        </Link>
+      </ImageAndTitleContainer>
 
       <ButtonsContainer>
         <StockContainer aria-live="polite">
